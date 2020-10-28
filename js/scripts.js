@@ -12,9 +12,14 @@ $(document).ready(function() {
     $("input:checkbox[name=coping]:checked").each(function() {
       copingTotal += parseInt($(this).val());
     });
-    if ()
+    if (stressTotal >= 3 && healthTotal >= 3) {
+      $("#make-changes").show();
+    } else if (copingTotal >= 3 && stressTotal == 0 && healthTotal == 0) {
+      $("#doing-great").show();
+    } else if (copingTotal >=3 && stressTotal <=3 && healthTotal <= 3) {
+      $("#doing-okay").show();
+    }
     $("#stress-survey").hide();
-    $("#health-advice").show();
     event.preventDefault();
   });
 });
