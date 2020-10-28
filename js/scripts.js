@@ -4,6 +4,9 @@ $(document).ready(function() {
     $("#health-advice").show();
     $("input:checkbox[name=stress-symptoms]:checked").each(function() {
       const stressSymptoms = $(this).val();
+      $("#health-advice").append(stressSymptoms + "<br>");
+
     });
+    $("#stress-survey").hide();
   });
 });
